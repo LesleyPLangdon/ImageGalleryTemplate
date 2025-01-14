@@ -9,8 +9,10 @@ const images = Array.from(galleryImages); // Convert NodeList to Array
 let currentIndex = 0; // Track the currently displayed image
 
  // Open lightbox when an image is clicked
-galleryImages.forEach(image => {
+// Synchronize currentIndex when an image is clicked
+images.forEach((image, index) => {
     image.addEventListener('click', () => {
+        currentIndex = index; // Update currentIndex to the clicked image
         lightboxImg.src = image.src;
         lightbox.classList.add('visible');
     });
@@ -25,14 +27,7 @@ lightbox.addEventListener('click', (event) => {
 
 
 
-// Synchronize currentIndex when an image is clicked
-galleryImages.forEach((image, index) => {
-    image.addEventListener('click', () => {
-        currentIndex = index; // Update currentIndex to the clicked image
-        lightboxImg.src = image.src;
-        lightbox.classList.add('visible');
-    });
-});
+
 
 // Show next image in the lightbox
 document.getElementById('next').addEventListener('click', () => {
