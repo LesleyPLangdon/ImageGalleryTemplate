@@ -53,6 +53,19 @@ footer {
 #gallery-container img:hover {
     transform: scale(1.1);
 }
+/* Styling combined image and caption as figure */
+#gallery-container figure {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+/* Style caption */
+#gallery-container figcaption {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+}
 /* Lightbox container styling - complete*/
 #lightbox {
     position: fixed;
