@@ -13,10 +13,17 @@ let currentIndex = 0; // Track the currently displayed image
 images.forEach((image, index) => {
     image.addEventListener('click', () => {
         currentIndex = index; // Update currentIndex to the clicked image
+        SpeechRecognitionAlternative.classList.remove('hidden');
         lightboxImg.src = image.src;
         lightbox.classList.add('visible');
+
+        lightboxImg.onload = () => {
+            SpeechRecognitionAlternative.classList.add('hidden');
+        };
     });
 });
+
+
 
 // Close lightbox when clicking outside the content
 lightbox.addEventListener('click', (event) => {
