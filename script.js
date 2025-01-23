@@ -60,3 +60,30 @@ document.addEventListener('keydown', (event) => {
         lightbox.classList.remove('visible');
     }
 });
+
+
+
+document.getElementById('next').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % galleryImages.length;
+    updateLightboxImage();
+  });
+  
+  document.getElementById('prev').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+    updateLightboxImage();
+  });
+  
+  // Function to update the lightbox image with spinner
+  function updateLightboxImage() {
+    spinner.classList.remove('hidden');
+    lightboxImg.src = galleryImages[currentIndex].src;
+  
+    lightboxImg.onload = () => {
+      spinner.classList.add('hidden');
+    };
+  }
+  
+  // Close lightbox
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('visible');
+  });
