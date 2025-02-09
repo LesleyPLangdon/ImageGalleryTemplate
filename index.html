@@ -8,58 +8,38 @@
         <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <header></header>
+        <header>
+            <h1>My Name</h1>
+        </header>
         <main>
-            <!-- Day 1: Review basic html, image tags, and placeholder images -->
-            <h1>My Image Gallery</h1>
-    <!-- Gallery container with images and captions -->
-    <div id="gallery-container">
-        <figure>
-            <img src="product/bagelsWithSadDonut.jpg" alt="Placeholder Image 1">
-            <figcaption>Image 1</figcaption>
-        </figure>
-        <figure>
-            <img src="product/blackT.jpg" alt="Placeholder Image 2">
-            <figcaption>Image 2</figcaption>
-        </figure>
-        <figure>
-            <img src="product/blueberryMuffinMix.jpg" alt="Placeholder Image 3">
-            <figcaption>Image 3</figcaption>
-        </figure>
-        <figure>
-            <img src="product/chickenCupNoodles.jpg" alt="Placeholder Image 1">
-            <figcaption>Image 4</figcaption>
-        </figure>
-        <figure>
-            <img src="product/chickenRamenNudles.jpg" alt="Placeholder Image 2">
-            <figcaption>Image 5</figcaption>
-        </figure>
-        <figure>
-            <img src="product/chocolateFudgePoptartFlavor.jpg" alt="Placeholder Image 3">
-            <figcaption>Image 6</figcaption>
-        </figure>
-        <figure>
-            <img src="product/coffeeMuffinsFlakeyDonut.jpg" alt="Placeholder Image 1">
-            <figcaption>Image 7</figcaption>
-        </figure>
-        <figure>
-            <img src="product/coffeeWithCreamers.jpg" alt="Placeholder Image 2">
-            <figcaption>Image 8</figcaption>
-        </figure>
-        <figure>
-            <img src="product/combos.jpg" alt="Placeholder Image 3">
-            <figcaption>Image 9</figcaption>
-        </figure>
-       
-    </div>
-    <!-- Lightbox for displaying selected images -->
-    <div id="lightbox" class="hidden">
-        <div class="lightbox-content">
-            <button id="prev">&lt;</button>
-            <img id="lightbox-img" src="" alt="">
-            <button id="next">&gt;</button>
-        </div>
-    </div>
+            <a href="imageGallery.html"><h2>Image Gallery Project</h2></a>
+            <h2>Project Description</h2>
+            <p>My project is an interactive image gallery that allows users to view a collection of images and open them in a lightbox for a larger view. The gallery displays images in a neat grid format, keeping them square for a uniform look. When a user clicks on an image, it opens in a lightbox, where they can navigate through the images using arrow buttons or the keyboard. The purpose of this project is to practice working with HTML, CSS, and JavaScript while learning how to create an engaging and user-friendly web experience.</p>
+            
+            <h2>Development Process Overview</h2>
+        
+            <h3>Technologies Used</h3>
+            <ul>
+                <li><strong>HTML</strong>: Structured the webpage, including the gallery layout and lightbox.</li>
+                <li><strong>CSS</strong>: Styled the gallery and lightbox, ensuring images display neatly and maintain a user-friendly design.</li>
+                <li><strong>JavaScript</strong>: Added interactivity, including opening the lightbox, navigating images, and closing the lightbox when clicking outside or pressing the Escape key.</li>
+            </ul>
+        
+            <h3>Challenges Faced & How I Overcame Them</h3>
+            <ul>
+                <li><strong>Lightbox Not Opening</strong>: Initially, the lightbox didn’t display because of a JavaScript error. I fixed this by debugging my code and correcting a typo where I mistakenly referenced an undefined variable.</li>
+                <li><strong>Maintaining Image Aspect Ratios</strong>: The gallery images needed to be square, but they had to retain their original aspect ratio in the lightbox. I solved this by using <code>object-fit: cover;</code> for the gallery and <code>object-fit: contain;</code> for the lightbox.</li>
+                <li><strong>Handling Click Events Properly</strong>: There was a redundant event listener that interfered with closing the lightbox. I streamlined the code to ensure the lightbox closed only when clicking outside the image.</li>
+            </ul>
+        
+            <h3>Features Added to Improve the Project</h3>
+            <ul>
+                <li><strong>Keyboard Navigation</strong>: Users can navigate through images using the left and right arrow keys.</li>
+                <li><strong>Hover Effects on Images</strong>: A hover effect enlarges images slightly when the user hovers over them, making the interface more interactive.</li>
+                <li><strong>Smooth Lightbox Transition</strong>: Added CSS transitions to make the lightbox fade in and out smoothly for a better user experience.</li>
+            </ul>
+            
+            
         </main>
         <footer></footer>
         <script src="script.js"></script>
